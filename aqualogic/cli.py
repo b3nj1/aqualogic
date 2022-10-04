@@ -4,8 +4,8 @@ import threading
 import logging
 import sys
 
-from .core import AquaLogic
-from .states import States
+from aqualogic.core import AquaLogic
+from aqualogic.states import States
 
 logging.basicConfig(level=logging.INFO)
 
