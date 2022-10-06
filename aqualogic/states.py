@@ -11,7 +11,7 @@ class States(IntEnum):
     SPA = 1 << 4
     FILTER = 1 << 5
     LIGHTS = 1 << 6
-    AUX_1 = 1 << 7
+    BLOWER = 1 << 7
     AUX_2 = 1 << 8
     SERVICE = 1 << 9
     AUX_3 = 1 << 10

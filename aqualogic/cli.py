@@ -4,17 +4,17 @@ import threading
 import logging
 import sys
 
+import paho.mqtt.client as mqtt
+
 from aqualogic.core import AquaLogic
 from aqualogic.states import States
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.WARNING)
 
 
 def _data_changed(panel):
-    print('Pool Temp: {}'.format(panel.pool_temp))
-    print('Air Temp: {}'.format(panel.air_temp))
-    print('Pump Speed: {}'.format(panel.pump_speed))
-    print('Pump Power: {}'.format(panel.pump_power))
+    print(f'Pool Temp: {panel.pool_temp} Air Temp: {panel.air_temp}')
+    print(f'Pump Speed: {panel.pump_speed} Pump Power: {panel.pump_power}')
     print('States: {}'.format(panel.states()))
     if panel.get_state(States.CHECK_SYSTEM):
         print('Check System: {}'.format(panel.check_system_msg))
